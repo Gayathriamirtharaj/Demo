@@ -1,13 +1,15 @@
-package service;
+package com.example.service;
 
+import com.example.exception.ServiceException;
+import com.example.model.UserEntity;
+import com.example.repository.UserRepository;
+import com.example.security.JWTProvider;
+import com.example.vo.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.fge.jsonpatch.JsonPatch;
 import com.github.fge.jsonpatch.JsonPatchException;
-import security.JWTProvider;
-import exception.ServiceException;
-import model.UserEntity;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,8 +20,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.server.ResponseStatusException;
-import repository.UserRepository;
-import vo.*;
 
 @Component
 public class UserServiceImpl implements UserService {

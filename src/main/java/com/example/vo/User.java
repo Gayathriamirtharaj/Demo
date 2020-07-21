@@ -1,8 +1,8 @@
-package vo;
+package com.example.vo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.ToString;
-import model.Role;
+import com.example.model.Role;
 
 import java.util.List;
 

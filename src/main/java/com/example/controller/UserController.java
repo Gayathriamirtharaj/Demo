@@ -1,6 +1,8 @@
-package controller;
+package com.example.controller;
 
 
+import com.example.service.UserService;
+import com.example.vo.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.fge.jsonpatch.JsonPatch;
@@ -13,8 +15,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-import service.UserService;
-import vo.*;
 
 import java.security.Principal;
 import java.util.Collections;
@@ -58,7 +58,7 @@ public class UserController {
         this.id = id;
         this.patchJson = patchJson;
         try{
-            User user=UserCollection.users.get(id);
+            User user= UserCollection.users.get(id);
             User userpatch=userService.patchUser(patchJson,user);
             UserCollection.users.set(id,userpatch);
             return ResponseEntity.ok(userpatch);

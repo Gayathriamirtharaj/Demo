@@ -1,12 +1,12 @@
-package service;
+package com.example.service;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.github.fge.jsonpatch.JsonPatch;
 import com.github.fge.jsonpatch.JsonPatchException;
 import org.springframework.stereotype.Component;
-import vo.LoginRequest;
-import vo.LoginResponse;
-import vo.RegistrationResponse;
-import vo.User;
+import com.example.vo.LoginRequest;
+import com.example.vo.LoginResponse;
+import com.example.vo.RegistrationResponse;
+import com.example.vo.User;
 @Component
 
 public interface UserService {

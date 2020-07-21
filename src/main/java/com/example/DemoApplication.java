@@ -1,7 +1,7 @@
-package com.example.Demo;
+package com.example;
 
-import service.UserService;
-import model.Role;
+import com.example.service.UserService;
+import com.example.model.Role;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
-import vo.User;
+import com.example.vo.User;
 
 import java.util.ArrayList;
 import java.util.Arrays;

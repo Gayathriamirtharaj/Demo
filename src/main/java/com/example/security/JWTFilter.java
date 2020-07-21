@@ -1,5 +1,5 @@
-package security;
-import exception.ServiceException;
+package com.example.security;
+import com.example.exception.ServiceException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
